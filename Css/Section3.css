@@ -1,0 +1,39 @@
+.counter-section {
+    padding: 80px;
+    background: linear-gradient(90deg, #0b3d2e, #0e502f);
+    color: #ffffff;
+}
+
+.counter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.counter-item h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.counter-item p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.comparison-section {
+    user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .counter-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

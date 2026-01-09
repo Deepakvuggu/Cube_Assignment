@@ -1,0 +1,359 @@
+/* ===============================
+   SECTION 6 : PRODUCT SHOWCASE
+   =============================== */
+
+.product-section-6 {
+    padding: 72px 0;
+    background: #ffffff;
+}
+
+/* GRID LAYOUT */
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* changed from grid */
+    gap: 64px;
+    align-items: stretch;
+    /* equal height columns */
+}
+
+/* ===============================
+   LEFT : IMAGE GALLERY
+   =============================== */
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    /* smooth transition */
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.gallery-main img {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.gallery-main img.fade-out {
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+
+.gallery-main img.fade-out {
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+.gallery-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Main image container */
+.gallery-main {
+    position: relative;
+    height: 520px;
+    /* main image height */
+    border-radius: 26px;
+    overflow: hidden;
+    background: #f3f3f3;
+    flex-shrink: 0;
+}
+
+/* Main image itself */
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ensures image fills the container */
+    object-position: center;
+    display: block;
+}
+
+/* Thumbnails container */
+.gallery-thumbs {
+    display: flex;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+/* Thumbnails */
+.gallery-thumbs img {
+    width: calc((100% - 42px)/4);
+    /* 4 thumbs with 14px gap */
+    height: 520px;
+    /* same as main image */
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-thumbs img:hover,
+.gallery-thumbs img.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
+/* NAVIGATION ARROWS */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+}
+
+.nav-arrow.left {
+    left: 16px;
+}
+
+.nav-arrow.right {
+    right: 16px;
+}
+
+/* DOTS */
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #cfcfcf;
+}
+
+.dot.active {
+    background: #000;
+}
+
+/* THUMBNAILS */
+.gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    height: 130px;
+}
+
+/* THUMBNAILS — fix height */
+.gallery-thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.gallery-thumbs img:hover,
+.gallery-thumbs img.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   RIGHT : PRODUCT INFO
+   =============================== */
+
+.product-info {
+    flex: 1;
+    /* match left side height dynamically */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.product-info h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.rating {
+    margin-bottom: 16px;
+    color: #ff9800;
+    font-size: 16px;
+}
+
+.rating span {
+    color: #555;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.desc {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* SUBSCRIPTIONS */
+.subscription {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.subscription.active {
+    border-color: #0a8a42;
+}
+
+/* Radio Highlight */
+.subscription input[type="radio"] {
+    display: none;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: #f9f9f9;
+    font-weight: bold;
+}
+
+.subscription.active .sub-header {
+    background: linear-gradient(to right, #00b140, #007f27);
+    color: #fff;
+}
+
+.sub-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.4s ease;
+    padding: 0 16px;
+}
+
+.subscription.active .sub-body {
+    max-height: 1000px;
+    padding: 16px;
+}
+
+/* FRAGRANCE OPTIONS */
+.fragrance-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.frag {
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.frag img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.frag.active {
+    border-color: #ff4081;
+}
+
+/* INCLUDED SECTION */
+.included {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.included div {
+    text-align: center;
+}
+
+.included div small {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #555;
+}
+
+.included div img {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    object-fit: cover;
+}
+
+/* BENEFITS */
+.benefits {
+    list-style: none;
+    padding-left: 0;
+    color: #333;
+}
+
+.benefits li {
+    margin-bottom: 6px;
+}
+
+/* ADD TO CART */
+.add-cart {
+    margin-top: auto;
+    padding: 16px;
+    background-color: #006633;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-cart:hover {
+    background-color: #004d26;
+}
+
+.gallery-wrapper {
+    height: 100%;
+}
+
+.gallery-main {
+    height: 520px;
+    /* fixed visual anchor */
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .gallery-main {
+        min-height: 380px;
+    }
+}
+
+/* GLOBAL UX FIX */
+button,
+img {
+    user-select: none;
+}

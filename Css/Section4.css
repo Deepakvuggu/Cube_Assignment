@@ -1,0 +1,154 @@
+.comparison-section {
+    padding: 15rem;
+    background: #ffffff;
+}
+
+.comparison-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.comparison-line {
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background: #0b3d2e;
+    margin-bottom: 16px;
+}
+
+.comparison-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0b3d2e;
+}
+
+/* TABLE */
+.comparison-table {
+    border-top: 1px solid #cfcfcf;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    align-items: center;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.table-head {
+    padding: 24px 0;
+}
+
+.col {
+    padding: 18px 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.qualities {
+    text-align: left;
+    font-weight: 600;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand img {
+    width: 95px;
+    height: 75px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.brand span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* HIGHLIGHT GTG COLUMN */
+.highlight {
+    background: #eefbf3;
+    font-weight: 600;
+    color: #0b3d2e;
+}
+
+/* CTA */
+.comparison-cta {
+    text-align: center;
+    margin-top: 64px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #0b3d2e;
+    color: #ffffff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ICON SYSTEM (FIGMA-MATCHED) */
+.icon-check,
+.icon-check-outline,
+.icon-cross {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Filled green check */
+.icon-check {
+    background: #0b3d2e;
+    color: #ffffff;
+}
+.icon-check::before {
+    content: "✓";
+}
+
+/* Outline check */
+.icon-check-outline {
+    border: 1.5px solid #0b3d2e;
+    color: #0b3d2e;
+}
+.icon-check-outline::before {
+    content: "✓";
+}
+
+/* Cross */
+.icon-cross {
+    border: 1.5px solid #bdbdbd;
+    color: #5a5a5a;
+}
+.icon-cross::before {
+    content: "✕";
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .table-row {
+        grid-template-columns: 1.5fr repeat(4, 1fr);
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison-table {
+        overflow-x: auto;
+    }
+
+    .table-row {
+        min-width: 800px;
+    }
+}

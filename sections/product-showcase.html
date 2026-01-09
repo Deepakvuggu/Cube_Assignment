@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/Section5.css">
+    <link rel="stylesheet" href="../Css/style.css">
+
+
+</head>
+
+<body>
+    <section class="product-section-6">
+        <div class="product-container">
+
+            <!-- LEFT : IMAGE GALLERY -->
+            <div class="gallery-wrapper">
+                <div class="gallery-main">
+                    <button class="nav-arrow left" onclick="prevImage()">‹</button>
+                    <img id="mainImage" src="../assets/P1.png" alt="Perfume" />
+                    <button class="nav-arrow right" onclick="nextImage()">›</button>
+                </div>
+
+                <div class="gallery-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <div class="gallery-thumbs">
+                    <img src="../assets/P2.jpg" onclick="setImage(0)" />
+                    <img src="../assets/P3.jpg" onclick="setImage(1)" />
+                    <img src="../assets/P4.jpg" onclick="setImage(2)" />
+                    <img src="../assets/P5.jpg" onclick="setImage(3)" />
+                </div>
+            </div>
+
+            <!-- RIGHT : PRODUCT INFO -->
+            <div class="product-info">
+                <h2>GTG Perfumes</h2>
+
+                <div class="rating">
+                    ★★★★★ <span>4.7 (999+ reviews)</span>
+                </div>
+
+                <p class="desc">
+                    Experience the timeless allure backed by modern artistry, captured in every bottle of our fragrance.
+                </p>
+
+                <!-- SINGLE SUBSCRIPTION -->
+                <div class="subscription active">
+                    <!-- Highlight Badge -->
+                    <div class="sub-badge">Most Popular</div>
+
+                    <div class="sub-header" onclick="toggleSub(this)">
+                        <label>
+                            <input type="radio" name="subscription" checked>
+                            <span>Single Subscription</span>
+                        </label>
+                        <strong>$99.99 <del>$146</del></strong>
+                    </div>
+                    <div class="sub-body">
+                        <h4>Choose a Fragrance</h4>
+                        <div class="fragrance-options">
+                            <div class="frag active" data-src-main="../assets/F1.png"
+                                data-src-sampler="../assets/F1.png">
+                                <img src="../assets/F1.png" />
+                                <span>Original</span>
+                            </div>
+                            <div class="frag" data-src-main="../assets/F2.png" data-src-sampler="../assets/F2.png">
+                                <img src="../assets/F2.png" />
+                                <span>Lily</span>
+                            </div>
+                            <div class="frag" data-src-main="../assets/F3.png" data-src-sampler="../assets/F3.png">
+                                <img src="../assets/F3.png" />
+                                <span>Rose</span>
+                            </div>
+                        </div>
+                        <h4>What’s Included</h4>
+                        <div class="included">
+                            <div class="included-main">
+                                <small>Every 30 Days</small>
+                                <img id="mainBottle" src="../assets/F1.png" alt="Main Bottle">
+                            </div>
+                            <div class="included-sampler">
+                                <small>One Time <b>(Free)</b></small>
+                                <div class="sampler-images">
+                                    <img id="sample1" src="../assets/F1.png" alt="Sample 1">
+                                    <img id="sample2" src="../assets/F2.png" alt="Sample 2">
+                                    <img id="sample3" src="../assets/F3.png" alt="Sample 3">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="benefits">
+                            <li>✔ 1 Bottle Shipped Monthly</li>
+                            <li>✔ Free Sampler for Original, Lily & Rose</li>
+                            <li>✔ 50% OFF Shipping</li>
+                            <li>✔ Pause or Cancel Anytime After 3 Months</li>
+                            <li>✔ 28 Day Money Back Guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DOUBLE SUBSCRIPTION -->
+                <div class="subscription">
+                    <div class="sub-header" onclick="toggleSub(this)">
+                        <label>
+                            <input type="radio" name="subscription">
+                            <span>Double Subscription</span>
+                        </label>
+                        <strong>$169.99 <del>$346</del></strong>
+                    </div>
+
+                    <div class="sub-body">
+                        <!-- Fragrance 1 -->
+                        <h4>Choose Fragrance 1</h4>
+                        <div class="fragrance-options">
+                            <div class="frag active">
+                                <input type="radio" name="double-frag1" checked>
+                                <img src="../assets/F1.png" />
+                                <span>Original</span>
+                            </div>
+                            <div class="frag">
+                                <input type="radio" name="double-frag1">
+                                <img src="../assets/F2.png" />
+                                <span>Lily</span>
+                            </div>
+                            <div class="frag">
+                                <input type="radio" name="double-frag1">
+                                <img src="../assets/F3.png" />
+                                <span>Rose</span>
+                            </div>
+                        </div>
+
+                        <!-- Fragrance 2 -->
+                        <h4>Choose Fragrance 2</h4>
+                        <div class="fragrance-options">
+                            <div class="frag active">
+                                <input type="radio" name="double-frag2" checked>
+                                <img src="../assets/F1.png" />
+                                <span>Original</span>
+                            </div>
+                            <div class="frag">
+                                <input type="radio" name="double-frag2">
+                                <img src="../assets/F2.png" />
+                                <span>Lily</span>
+                            </div>
+                            <div class="frag">
+                                <input type="radio" name="double-frag2">
+                                <img src="../assets/F3.png" />
+                                <span>Rose</span>
+                            </div>
+                        </div>
+
+                        <h4>What’s Included</h4>
+                        <div class="included">
+                            <div class="included-main">
+                                <small>Every 30 Days</small>
+                                <img src="../assets/F1.png" alt="Main Bottle">
+                            </div>
+                            <div class="included-sampler">
+                                <small>One Time <b>(Free)</b></small>
+                                <div class="sampler-images">
+                                    <img src="../assets/F1.png" alt="Sample 1">
+                                    <img src="../assets/F2.png" alt="Sample 2">
+                                    <img src="../assets/F3.png" alt="Sample 3">
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="benefits">
+                            <li>✔ 1 Bottle Shipped Monthly</li>
+                            <li>✔ Free Sampler for Original, Lily & Rose</li>
+                            <li>✔ 50% OFF Shipping</li>
+                            <li>✔ Pause or Cancel Anytime After 3 Months</li>
+                            <li>✔ 28 Day Money Back Guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mainImage = document.getElementById("mainImage");
+        const thumbs = document.querySelectorAll(".gallery-thumbs img");
+        const dots = document.querySelectorAll(".gallery-dots .dot");
+
+        let currentIndex = -1;
+
+        function updateDots(index) {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle("active", i === index);
+            });
+        }
+
+        function updateThumbs(index) {
+            thumbs.forEach((thumb, i) => {
+                thumb.classList.toggle("active", i === index);
+            });
+        }
+
+        function changeImage(src) {
+            mainImage.style.opacity = "0";
+            mainImage.style.transform = "scale(1.04)";
+            setTimeout(() => {
+                mainImage.src = src;
+                mainImage.style.opacity = "1";
+                mainImage.style.transform = "scale(1)";
+            }, 200);
+        }
+
+        function nextImage() {
+            if (currentIndex === -1) currentIndex = 0;
+            else currentIndex = (currentIndex + 1) % thumbs.length;
+
+            changeImage(thumbs[currentIndex].src);
+            updateDots(currentIndex);
+            updateThumbs(currentIndex);
+        }
+
+        function prevImage() {
+            if (currentIndex === -1) currentIndex = thumbs.length - 1;
+            else currentIndex = currentIndex === 0 ? thumbs.length - 1 : currentIndex - 1;
+
+            changeImage(thumbs[currentIndex].src);
+            updateDots(currentIndex);
+            updateThumbs(currentIndex);
+        }
+
+        function setImage(index) {
+            currentIndex = index;
+            changeImage(thumbs[index].src);
+            updateDots(index);
+            updateThumbs(index);
+        }
+
+        // ===============================
+        // PRODUCT INFO: SUBSCRIPTION + FRAGRANCE
+        // ===============================
+        function toggleSub(element) {
+            const allSubs = document.querySelectorAll('.subscription');
+
+            allSubs.forEach(sub => {
+                const radio = sub.querySelector('input[type="radio"]');
+                if (sub === element.parentElement) {
+                    // Open clicked subscription
+                    sub.classList.add('active');
+                    radio.checked = true;
+                } else {
+                    // Close others
+                    sub.classList.remove('active');
+                    radio.checked = false;
+                }
+            });
+        }
+
+
+
+        const fragranceOptions = document.querySelectorAll('.frag');
+        const mainBottle = document.getElementById('mainBottle');
+        const sample1 = document.getElementById('sample1');
+        const sample2 = document.getElementById('sample2');
+        const sample3 = document.getElementById('sample3');
+
+        fragranceOptions.forEach(frag => {
+            frag.addEventListener('click', () => {
+                fragranceOptions.forEach(f => f.classList.remove('active'));
+                frag.classList.add('active');
+
+                // Update main bottle
+                mainBottle.src = frag.dataset.srcMain;
+
+                // Update sampler bottles
+                sample1.src = frag.dataset.srcMain;
+                sample2.src = "../assets/F2.png";
+                sample3.src = "../assets/F3.png";
+            });
+        });
+
+        // Fragrance selection for double subscription
+        document.querySelectorAll('.subscription .frag').forEach(frag => {
+            frag.addEventListener('click', () => {
+                const parent = frag.parentElement;
+                parent.querySelectorAll('.frag').forEach(f => f.classList.remove('active'));
+                frag.classList.add('active');
+            });
+        });
+
+    </script>
+
+    <script>
+        function syncHeights() {
+            const left = document.querySelector('.gallery-wrapper');
+            const right = document.querySelector('.product-info');
+
+            if (!left || !right) return;
+
+            // Reset first
+            left.style.height = 'auto';
+
+            // Match the taller side
+            const rightHeight = right.offsetHeight;
+            left.style.height = rightHeight + 'px';
+        }
+
+        /* Run on load */
+        window.addEventListener('load', syncHeights);
+
+        /* Run on resize */
+        window.addEventListener('resize', syncHeights);
+
+        /* Run when subscription toggles */
+        function toggleSub(el) {
+            document.querySelectorAll('.subscription').forEach(sub => {
+                sub.classList.remove('active');
+                sub.querySelector('input')?.checked = false;
+            });
+
+            const parent = el.closest('.subscription');
+            parent.classList.add('active');
+            parent.querySelector('input')?.checked = true;
+
+            setTimeout(syncHeights, 300); // wait for animation
+        }
+    </script>
+    <script>
+        function syncSectionHeights() {
+            const left = document.querySelector('.gallery-wrapper');
+            const right = document.querySelector('.product-info');
+
+            if (!left || !right) return;
+
+            left.style.height = 'auto';
+            left.style.height = right.offsetHeight + 'px';
+        }
+
+        /* Run on load & resize */
+        window.addEventListener('load', syncSectionHeights);
+        window.addEventListener('resize', syncSectionHeights);
+
+        /* Call after subscription toggle */
+        function toggleSub(el) {
+            document.querySelectorAll('.subscription').forEach(s => {
+                s.classList.remove('active');
+                s.querySelector('input')?.checked = false;
+            });
+
+            const parent = el.closest('.subscription');
+            parent.classList.add('active');
+            parent.querySelector('input')?.checked = true;
+
+            setTimeout(syncSectionHeights, 350);
+        }
+
+        (function () {
+            const navbar = document.querySelector('.navbar');
+
+            if (!navbar) {
+                console.error('Navbar not found');
+                return;
+            }
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 10) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        })();
+
+    </script>
+</body>
+
+</html>

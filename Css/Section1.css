@@ -1,0 +1,320 @@
+/* Import Inter Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+:root {
+    --primary-green: #05422C;
+    /* Dark green from the screenshot */
+    --text-muted: #556B63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* Applied to match screenshot */
+}
+
+/* 1. Main Heading Adjustment */
+h1 {
+    font-size: 104px;
+    /* Increased to match large scale in figma */
+    line-height: 0.95;
+    /* Tighter line height as seen in design */
+    color: var(--primary-green);
+    font-weight: 800;
+    /* Extra Bold */
+    margin-bottom: 56px;
+    letter-spacing: -3px;
+    /* Significant negative kerning for that premium look */
+}
+
+/* 2. Stats Section Typography */
+.stat-item h2 {
+    font-size: 72px;
+    /* Matched to large '10x' scale */
+    color: var(--primary-green);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-item p {
+    color: var(--text-muted);
+    font-size: 18px;
+    /* Slightly larger labels */
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* 3. Badge Typography */
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.badge-icon {
+    font-size: 20px;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(5, 66, 44, 0.1);
+    color: var(--primary-green);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    /* Matched to small label size */
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+/* 4. Main Button Text */
+.btn-main {
+    background: var(--primary-green);
+    color: white;
+    padding: 22px 56px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    /* Larger CTA font */
+    display: inline-block;
+}
+
+/* 5. Navigation Links */
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-green);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+:root {
+    --primary-green: #05422C;
+    --text-muted: #556B63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* To get the "left-most" look, we ensure the container 
+   is wide and the content inside isn't centered.
+*/
+.container {
+    width: 100%;
+    padding: 0 5%;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    background-color: transparent;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* FORCE WHITE ON SCROLL */
+.navbar.scrolled {
+    background-color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout */
+.nav-wrapper {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary-green);
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    margin-left: 6rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-green);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--primary-green);
+}
+
+.btn-nav {
+    background: var(--primary-green);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    background-image: url('../assets/HeroBanner.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.badge {
+    background: linear-gradient(180deg, #5c836c 0%, #548d6e 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(5, 66, 44, 0.1);
+    color: var(--primary-green);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 24px;
+    color: white;
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    color: rgb(0, 46, 0);
+    font-weight: 800;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.stats {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 48px;
+    justify-content: flex-start;
+    /* Stats aligned to left */
+}
+
+.stat-item h2 {
+    font-size: 87px;
+    font-weight: 700;
+    line-height: 1;
+    gap: 2rem;
+
+    background: linear-gradient(180deg, #25372d 0%, #288353 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.stat-item p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.btn-main {
+    background: var(--primary-green);
+    color: white;
+    padding: 18px 48px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(5, 66, 44, 0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 64px;
+    }
+
+    .stats {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        background-position: 75% center;
+        /* Adjusts image to keep bottle visible */
+        justify-content: center;
+        /* Center content only on mobile for better UI */
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}
